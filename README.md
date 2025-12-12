@@ -1,26 +1,36 @@
-#  API Crypto Tracker
+#  API Crypto Tracker Airflow & Docker
 
-Python project that fetches the latest cryptocurrency prices from CoinMarketCap and saves them to a local CSV file.
+Automated cryptocurrency data pipeline built with **Apache Airflow** and fully containerized using **Docker Compose**.
+The project fetches market data from an external API on a scheduled basis and stores the results for further analysis.
 
 ---
 
 ##  Features
 
-- Fetches live crypto data from [CoinMarketCap API](https://coinmarketcap.com/api/)
-- Saves results to `crypto_dataset.csv` with timestamp
-- Automatically appends new rows
-- Uses `.env` file to hide sensitive API keys
+- Automated daily data ingestion using **Airflow DAG**
+- Fetches live cryptocurrency prices from **CoinMarketCap API**
+- Appends new records to `crypto_dataset.csv` with timestamps
+- Local setup with Docker
 
 ---
 
 ##  Technologies Used
 
 - Python
-- Jupyter Notebook
-- requests
-- dotenv
-- CoinMarketCap API
+- Apache Airflow
+- Docker
+- PostgreSQL
+- Pandas, Requests
 
+---
+
+## Pipeline Overview
+
+1. Airflow DAG runs on a daily schedule
+2. External crypto API is queried
+3. Raw data is processed using Pandas
+4. Results are persisted to CSV
+   
 ---
 
 ##  Sample Output
