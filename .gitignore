@@ -1,5 +1,13 @@
 .env
+<<<<<<< HEAD
 __pycache__/
 anaconda_projects/
 .ipynb_checkpoints/
 *.pyc
+=======
+*.log
+*.db
+__pycache__/
+.ipynb_checkpoints/
+anaconda_projects/
+>>>>>>> 68aebf5 (Initial Airflow Docker pipeline setup)
